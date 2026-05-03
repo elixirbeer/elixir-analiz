@@ -1,0 +1,98 @@
+body {
+    background-color: #0f0f0f; /* Koyu, mistik arka plan */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #c9a227; /* Altın rengi detay */
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+}
+
+.brand-name {
+    letter-spacing: 8px;
+    color: #c9a227;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+#question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+button {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+button:hover {
+    background-color: #c9a227;
+    color: #000;
+    border-color: #c9a227;
+}
+
+.hidden { display: none; }
+
+#recommendation-box {
+    background: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #c9a227;
+}
+
+#product-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #c9a227;
+}
+
+#promo-code {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+    border: 2px dashed #c9a227;
+    padding: 10px;
+}
+
+/* Mobil Ekranlar İçin Özel Ayarlar */
+@media (max-width: 600px) {
+    #quiz-container {
+        padding: 20px;
+        width: 85%;
+    }
+    button {
+        padding: 15px 20px; /* Telefonda parmakla basmayı kolaylaştırmak için butonları kalınlaştırdık */
+        font-size: 1.1rem;
+    }
+    .brand-name {
+        font-size: 1.8rem;
+    }
+}
