@@ -15,18 +15,18 @@ const questions = [
         types: ["A", "B", "C", "D"]
     },
     {
-        q: "4. DOKU: Senin karakterinin dokusu hangisi?",
-        options: ["Noir: Derin ve mistik.", "Zest: Keskin ve enerjik.", "Silk: Yumuşak ve ipeksi.", "Velvet: Dolgun ve kadifemsi."],
+        q: "4. DOKU: 'Meyve bizim için bir aroma değil, ana karakterdir.' Senin karakterinin dokusu hangisi?",
+        options: ["Derin ve mistik.", "Keskin ve enerjik.", "Yumuşak ve ipeksi.", "Dolgun ve kadifemsi."],
         types: ["A", "B", "C", "D"]
     },
     {
-        q: "5. GÖRSEL: Gözlerini kapat ve bir renk seç.",
+        q: "5. GÖRSEL: Gözlerini kapat ve bir renk seç; hangisi gününü sıradanlıktan çıkarır?",
         options: ["Koyu kırmızı-siyah geçişler.", "Canlı kavuniçi ve güneş sarısı.", "Mat altın ve şeftali tonları.", "Mor ve sofistike fuşya."],
         types: ["A", "B", "C", "D"]
     },
     {
-        q: "6. RİTM: Elixir senin ritminle nasıl buluşmalı?",
-        options: ["Yavaş yavaş, analiz yaparak.", "Hızlı, ferahlatıcı ve buz gibi.", "Pürüzsüz bir akışla, ana eşlik ederek.", "Damakta uzun süre kalan yoğun bir hisle."],
+        q: "6. RİTM: Elixir'in %6.0 alkol oranıyla dengelenmiş meyve özleri, senin ritminle nasıl buluşmalı?",
+        options: ["Yavaş yavaş, her yudumun analizini yaparak.", "Hızlı, ferahlatıcı ve buz gibi bir yudumla.", "Pürüzsüz bir akışla, ana eşlik ederek.", "Damakta uzun süre kalan yoğun bir hisle."],
         types: ["A", "B", "C", "D"]
     }
 ];
@@ -66,10 +66,22 @@ function showResult() {
     const winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
 
     const products = {
-        "A": { name: "Elixir Noir", desc: "Orman meyvelerinin derinliği ve mistik aroması tam senin karakterin." },
-        "B": { name: "Elixir Zest", desc: "Narenciye ve mangonun enerjisi senin yüksek temponu tamamlıyor." },
-        "C": { name: "Elixir Silk", desc: "Şeftali ve kayısının yumuşak geçişleri senin dingin ruhun için tasarlandı." },
-        "D": { name: "Elixir Velvet", desc: "Mürdüm eriği ve narın dolgun dokusu, sofistike zevklerine hitap ediyor." }
+        "A": { 
+            name: "Ruby Noir (Vişne / Kriek)", 
+            desc: "Derin, mistik ve asil. Vişnenin doğal ekşiliği ile biranın gövdesi arasında mükemmel bir denge sunar." 
+        },
+        "B": { 
+            name: "Zest Bright (Narenciye)", 
+            desc: "Enerjik, keskin ve ferah. Buğday birası bazlı, narenciye kabuklarından gelen uçucu yağlarla zenginleşmiş bir yapı." 
+        },
+        "C": { 
+            name: "Golden Silk (Şeftali ve Kayısı)", 
+            desc: "Yumuşak, kadifemsi ve ferahlatıcı. Özellikle yaz akşamları için tasarlanmış pürüzsüz bir içiş keyfi." 
+        },
+        "D": { 
+            name: "Velvet Berry (Ahududu ve Böğürtlen)", 
+            desc: "Modern, canlı ve oldukça aromatik. Yoğun meyve rengi ve damakta uzun süre kalan keskin bir lezzet profili." 
+        }
     };
 
     document.getElementById("product-name").innerText = products[winner].name;
